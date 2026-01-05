@@ -1,8 +1,6 @@
-// RestExceptionHandler.java
 package io.zipcoder.tc_spring_poll_application.exception;
 
-import io.zipcoder.tc_spring_poll_application.dtos.error.ErrorDetail;
-import io.zipcoder.tc_spring_poll_application.dtos.error.ValidationError;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -12,7 +10,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import jakarta.servlet.http.HttpServletRequest;
+import io.zipcoder.tc_spring_poll_application.dtos.error.ErrorDetail;
+import io.zipcoder.tc_spring_poll_application.dtos.error.ValidationError;
+
 import java.util.*;
 
 @ControllerAdvice
